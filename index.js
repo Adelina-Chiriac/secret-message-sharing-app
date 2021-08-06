@@ -1,5 +1,7 @@
 // Extract the hash from the URL containing the secret message
 const { hash } = window.location;
+// Decode the message from the hash
+const message = atob(hash.replace("#", ""));
 
 document.querySelector("form").addEventListener("submit", (event) => {
     event.preventDefault();
