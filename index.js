@@ -1,3 +1,6 @@
+// Extract the hash from the URL containing the secret message
+const { hash } = window.location;
+
 document.querySelector("form").addEventListener("submit", (event) => {
     event.preventDefault();
 
