@@ -5,5 +5,8 @@ document.querySelector("form").addEventListener("submit", (event) => {
     const encrypted = btoa(input.value);
 
     // Generate a link with the encrypted message appended to the current URL
-    document.querySelector("#link-input").value = `${window.location}#${encrypted}`;
+    const linkInput = document.querySelector("#link-input");
+    linkInput.value = `${window.location}#${encrypted}`;
+    // Auto-select the link
+    linkInput.select();
 });
